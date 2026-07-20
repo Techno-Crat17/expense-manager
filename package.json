@@ -1,0 +1,15 @@
+{
+  "name": "expense-tracker-root",
+  "version": "1.0.0",
+  "description": "Full-Stack Expense Tracker MERN Application",
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "dev": "concurrently \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "build": "npm --prefix server install && npm --prefix client install && npm --prefix client run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
